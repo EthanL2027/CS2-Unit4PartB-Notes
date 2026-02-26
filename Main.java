@@ -50,21 +50,42 @@ public class Main {
 
          // List.add( obj ) appends the obj to end of list
          // returns a boolean, but that's not important 
-         toDo.add( "Buy cat food");
-         toDo.add( "Finish reading");
-         toDo.add( "Call mom" );
+         toDo.add( "Watch The Phantom Menace");
+         toDo.add( "Watch Attack of the Clones");
+         toDo.add( "Watch Revenge of the Sith" );
          // check size after adding stuff
          System.out.println("Number of items after adding: " + toDo.size() );
          System.out.println( toDo ); // ArrayList has a nice toString method!!!
 
          // list.add( index, obj ) inserts the obj
          // AT a specific INDEX! (position)
-         toDo.add( 1, "Grade homework" );
+         toDo.add( 1, "Turn on the TV" );
          System.out.println( toDo );
          // REMEMBER that indexes start at 0
          // so 1 means we added to the SECOND spot
+
+
+         // list.get( int index ) returns the item
+         // at that specified index
+         String firstItem = toDo.get(0);
+         // return type matches what the ArrayList holds
+         System.out.println("Do this first: " + firstItem);
+
+         // list.set( int index, obj newItem)
+         // replaces item at that index with a new one!
+         String replacedItem = toDo.set(0, "Get the Skibidi slicers");
+         System.out.println(toDo);
+         System.out.println("We replaced " + replacedItem);
+
+
+      // List.remove( int index ) deletes the item at that index
+      // shifting everything else back one number
+      // also returns the removed item! (called E on the quick ref.)
+      String removedItem = toDo.remove(2);
+      System.out.println( toDo );
+      System.out.println("We removed the item: " + removedItem);
+
       
-      
-   }
-}
+   } // END MAIN METHOD
+} // END CLASS
 
