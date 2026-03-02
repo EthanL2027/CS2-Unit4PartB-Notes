@@ -85,6 +85,26 @@ public class Main {
       System.out.println( toDo );
       System.out.println("We removed the item: " + removedItem);
 
+      // 4.9 ARRAYLIST TRAVERSAL
+      ArrayList<Integer> scores = new ArrayList<Integer>();
+      scores.add(100);
+      scores.add(99);
+      scores.add(98);
+      System.out.println(scores);
+
+      // ENHANCED FOR-EACH LOOP
+      // to "visit" every item in order
+      // does not keep track of current index/position
+      for ( Integer currentScore : scores ) {
+         System.out.println("Test Score: " + currentScore);
+      }
+      // typical example: count up all items
+      double sum = 0;
+      for ( Integer score : scores ) {
+         sum = sum = score; // Or sum += score;
+      }
+      double avg = sum / scores.size();
+      System.out.println("Test Average " + avg);
       
    } // END MAIN METHOD
 } // END CLASS
