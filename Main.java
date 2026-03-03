@@ -105,6 +105,39 @@ public class Main {
       }
       double avg = sum / scores.size();
       System.out.println("Test Average " + avg);
+
+      // STANDARD FOR LOOP: when you need to keep
+      // track of the current INDEX (position)
+      // like if you want to use a method (set, get, etc)
+      for (int i = 0; i < scores.size(); i++ ) {
+         // get item at current index
+         int currentItem = scores.get(i);
+         int curvedScore = currentItem + 100;
+         scores.set(i, curvedScore); // replace item
+      }
+      System.out.println(scores);
+
+      // WHILE LOOP (iterate until condition ia false
+      ArrayList<String> groceries = new ArrayList<String>();
+      groceries.add("lebron james action figure");
+      groceries.add("oreos");
+      groceries.add("potatoe chips");
+      groceries.add("lebron james action figure");
+      // guess what this loop is trying to do
+      boolean found = false;
+      int index = 0;
+      // !not found is the same as found == false
+      while ( index < groceries.size() && !found ) {
+         if ("lebron james action figure".equals(groceries.get(index)) ) {
+            // if current item in list is "penne"
+            groceries.remove(index);
+            found = true;
+         }
+         else {
+            index++; // continue through list
+         }
+      }
+      System.out.println(groceries);
       
    } // END MAIN METHOD
 } // END CLASS
